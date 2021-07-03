@@ -8,7 +8,6 @@ target/
 .tmcproject.json
 
 # Ignore for now but will be added to repo later
-**/part02*/
 **/part04*/
 
 # Created by https://www.toptal.com/developers/gitignore/api/macos,netbeans,java,java-web
