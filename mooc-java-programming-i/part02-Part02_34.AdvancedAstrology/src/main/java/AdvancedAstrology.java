@@ -31,7 +31,20 @@ public class AdvancedAstrology {
 
     public static void christmasTree(int height) {
         // part 3 of the exercise
-
+        int baseHeight = 2;
+        int baseWidth = 3;
+        
+        // Print the triangle part of the tree
+        for (int i = 1; i <= height; i++) {
+            printSpaces(height - i);
+            printStars(i + (i - 1));
+        }
+        
+        // Print base of the triangle
+        for (int i = 1; i <= baseHeight; i++) {
+            printSpaces(height - baseHeight);
+            printStars(baseWidth);
+        }
     }
 
     public static void main(String[] args) {
