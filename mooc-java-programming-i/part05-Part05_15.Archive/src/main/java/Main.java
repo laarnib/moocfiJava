@@ -31,6 +31,7 @@ public class Main {
         printArchiveCollection(myCollection);       
     }
     
+    // Print only items with a distinct identifier
     public static void printArchiveCollection(ArrayList<ArchiveCollection> collection) {
         ArrayList<ArchiveCollection> nonDuplicateItems = new ArrayList<>();
 
