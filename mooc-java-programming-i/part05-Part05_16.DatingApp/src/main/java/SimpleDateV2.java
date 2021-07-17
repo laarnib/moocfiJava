@@ -1,7 +1,8 @@
 /**
  *
  * @author lb123
- * This class does not assume that all months have 30 days.
+ * Wanted to challenge myself so I made another version that doesn't assume
+ * that all months have 30 days.
  */
 public class SimpleDateV2 {
 
@@ -44,7 +45,6 @@ public class SimpleDateV2 {
     }
     
     // Added by LB
-    // This exercise assumes that each month has 30 days.
     public void advance() {
         // It's the last day of the year
         if (hasThirtyOneDays() && this.month == 12 && this.day == 31) {
@@ -84,38 +84,32 @@ public class SimpleDateV2 {
     }
     
     public void advance(int howManyDays) {        
-        // It's the last day of the year
         if (hasThirtyOneDays() && this.month == 12 && (this.day == 31 || (this.day + howManyDays > 31))) {
             this.day = this.day + howManyDays - 31;
             this.month = this.month + 1 - 12;
             this.year++;
         }
-        
-        // It's the last day of the month but not the year and the month has 31 days
+
         else if (hasThirtyOneDays() && (this.day == 31 || (this.day + howManyDays > 31))) {
             this.day = this.day + howManyDays - 31;
             this.month = this.month + 1;
         }       
-        
-        // It's the last day of February and it's a leap year
+
         else if (this.month == 2 && isLeapYear() && (this.day == 29 || (this.day + howManyDays > 29))) {
             this.day = this.day + howManyDays - 29;
             this.month = this.month + 1;
         }
         
-        // It's the last day of February and it's NOT a leap year
         else if (this.month == 2 && !isLeapYear() && (this.day == 28 || (this.day + howManyDays > 28))) {
             this.day = this.day + howManyDays - 28;
             this.month = this.month + 1;
         } 
            
-        // Month has thirty days and it's the last day
         else if (!hasThirtyOneDays() && (this.day == 30 || (this.day + howManyDays > 30))) {
             this.day = this.day + howManyDays - 30;
             this.month = this.month + 1;
         }
-        
-        // All other days
+
         else {
             this.day = this.day + howManyDays;
         }         
