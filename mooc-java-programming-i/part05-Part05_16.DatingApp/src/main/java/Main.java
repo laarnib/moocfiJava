@@ -21,7 +21,6 @@ public class Main {
 
 
         System.out.println("The date after 790 days from the examined Friday is ... try it out yourself!");
-        System.out.println(date.isLeapYear());
         
         SimpleDate today = new SimpleDate(5, 2, 2011);
         System.out.println(today);
