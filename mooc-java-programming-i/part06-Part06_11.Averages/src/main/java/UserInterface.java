@@ -47,6 +47,10 @@ public class UserInterface {
             grade = grade - 1;
         }
         
+        // Added by LB
+        // Prints the averages of points and grades
+        System.out.println("The average of points: " + this.register.averageOfPoints());
+        System.out.println("The average of grades: " + this.register.averageOfGrades());
     }
 
     public static void printsStars(int stars) {
