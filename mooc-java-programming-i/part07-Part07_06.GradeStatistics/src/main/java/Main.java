@@ -8,5 +8,8 @@ public class Main {
         
         // Write your program here -- consider breaking the program into 
         // multiple classes.
+        GradeRegistry gradeRegistry= new GradeRegistry(50);
+        UserInterface ui = new UserInterface(scanner, gradeRegistry);
+        ui.start();
     }
 }
