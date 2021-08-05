@@ -53,5 +53,4 @@ public class Bird {
         return this.name + " (" + this.latinName + "): " 
                + this.observationCount + " observations";
     }
-
 }

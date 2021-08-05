@@ -13,5 +13,4 @@ public class mainProgram {
         ui.start();
         scan.close();
     }
-
 }
